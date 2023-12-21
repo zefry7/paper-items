@@ -4,10 +4,10 @@ import log from "./img/log-in.svg"
 import { useState } from "react";
 
 function Header() {
-    const [wi, setWi] = useState(window.screen.availWidth)
+    const [wi, setWi] = useState(document.body.clientWidth)
 
     window.addEventListener("resize", () => {
-        setWi(window.screen.availWidth)
+        setWi(document.body.clientWidth)
     })
 
     return (

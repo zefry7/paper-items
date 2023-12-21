@@ -18,9 +18,13 @@
     }
     &__logo {
         margin-right: auto;
+        img {
+            @include adap(height, 22);
+            @include adap(width, 140);
+        }
     }
     &__links {
-        margin-right: 60px;
+        @include adap(margin-right, 60);
         display: flex;
         @include adap(gap, 60, 40, 0);
         &-item {
@@ -40,11 +44,19 @@
     }
     &__icons {
         display: flex;
-        gap: 30px;
+        @include adap(gap, 30);
     }
     &__search {
+        img {
+            @include adap(height, 24);
+            @include adap(width, 24);
+        }
     }
     &__log-in {
+        img {
+            @include adap(height, 24);
+            @include adap(width, 24);
+        }
     }
     &__burger {
         height: 20px;

@@ -1,6 +1,9 @@
 @import "mixins/adaptive";
 @import "null-style";
 @import "Header/header";
+@import "Intro/intro";
+@import "Result/result";
+@import "Material/material";
 
 @font-face {
     font-family: 'R4';
@@ -30,7 +33,7 @@ body {
     margin: 0 auto;
 }
 
-a, p {
+a, p, h1, h2, h3, h4, h5, h6, button {
     font-family: 'R4';
     font-size: 18px;
     color: #85859B;
