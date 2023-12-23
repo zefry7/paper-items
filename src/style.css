@@ -1169,123 +1169,246 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
 }
-.material {
+.material__content {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: auto;
-  gap: 30px;
+  grid-template-columns: repeat(4, 23%);
+  grid-template-rows: repeat(1, max-content);
 }
 @media (min-width: 1440px) {
-  .material {
+  .material__content {
     padding-top: 6.25vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 768px) {
-  .material {
+  .material__content {
     padding-top: calc(60px + 30 * (100vw - 768px) / (1440 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .material {
+  .material__content {
     padding-top: calc(60px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 320px) {
-  .material {
+  .material__content {
     padding-top: 60px;
   }
 }
 @media (min-width: 1440px) {
-  .material {
+  .material__content {
     padding-left: 11.4583333333vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 768px) {
-  .material {
+  .material__content {
     padding-left: calc(40px + 125 * (100vw - 768px) / (1440 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .material {
+  .material__content {
     padding-left: calc(15px + 25 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 320px) {
-  .material {
+  .material__content {
     padding-left: 15px;
   }
 }
 @media (min-width: 1440px) {
-  .material {
+  .material__content {
     padding-right: 11.4583333333vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 768px) {
-  .material {
+  .material__content {
     padding-right: calc(40px + 125 * (100vw - 768px) / (1440 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .material {
+  .material__content {
     padding-right: calc(15px + 25 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 320px) {
-  .material {
+  .material__content {
     padding-right: 15px;
   }
 }
 @media (min-width: 1440px) {
-  .material {
+  .material__content {
     padding-bottom: 6.25vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 768px) {
-  .material {
+  .material__content {
     padding-bottom: calc(60px + 30 * (100vw - 768px) / (1440 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .material {
+  .material__content {
     padding-bottom: calc(60px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 320px) {
-  .material {
+  .material__content {
     padding-bottom: 60px;
   }
 }
-.material__item {
-  width: 255px;
+@media (min-width: 1440px) {
+  .material__content {
+    gap: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__content {
+    gap: calc(30px + 0 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__content {
+    gap: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__content {
+    gap: 30px;
+  }
 }
 .material__img {
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  width: 255px;
-  height: 180px;
-  margin-bottom: 20px;
+  width: 100%;
+}
+.material__img img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.material__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .material__name {
   margin-bottom: 8px;
-  font-size: 30px;
   color: #666666;
+}
+@media (min-width: 1440px) {
+  .material__name {
+    font-size: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__name {
+    font-size: calc(30px + 0 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__name {
+    font-size: calc(24px + 6 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__name {
+    font-size: 24px;
+  }
 }
 .material__type {
   margin-bottom: 8px;
-  font-size: 14px;
   color: #B5B5BD;
 }
+@media (min-width: 1440px) {
+  .material__type {
+    font-size: 0.9722222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__type {
+    font-size: calc(14px + 0 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__type {
+    font-size: calc(14px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__type {
+    font-size: 14px;
+  }
+}
 .material__description {
-  margin-bottom: 20px;
   line-height: 170%;
 }
+@media (min-width: 1440px) {
+  .material__description {
+    margin-bottom: 1.3888888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__description {
+    margin-bottom: calc(10px + 10 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__description {
+    margin-bottom: calc(10px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__description {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .material__description {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__description {
+    font-size: calc(18px + 0 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__description {
+    font-size: calc(16px + 2 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__description {
+    font-size: 16px;
+  }
+}
 .material__more {
-  font-size: 20px;
+  margin-top: auto;
   color: #7875FE;
   display: flex;
   align-items: center;
   gap: 5px;
+}
+@media (min-width: 1440px) {
+  .material__more {
+    font-size: 1.3888888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__more {
+    font-size: calc(20px + 0 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__more {
+    font-size: calc(20px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__more {
+    font-size: 20px;
+  }
 }
 .material__more::after {
   content: "";
@@ -1294,7 +1417,171 @@ h1, h2, h3, h4, h5, h6 {
   width: 20px;
   background: url(../public/img/Material/arrow.svg) center/100% no-repeat;
 }
+.material__icons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(1, max-content);
+  width: 100%;
+  background: #EBEBEB;
+}
+@media (min-width: 1440px) {
+  .material__icons {
+    padding-top: 6.25vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__icons {
+    padding-top: calc(60px + 30 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__icons {
+    padding-top: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__icons {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .material__icons {
+    padding-left: 11.4583333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__icons {
+    padding-left: calc(40px + 125 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__icons {
+    padding-left: calc(15px + 25 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__icons {
+    padding-left: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  .material__icons {
+    padding-right: 11.4583333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__icons {
+    padding-right: calc(40px + 125 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__icons {
+    padding-right: calc(15px + 25 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__icons {
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  .material__icons {
+    padding-bottom: 6.25vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__icons {
+    padding-bottom: calc(60px + 30 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__icons {
+    padding-bottom: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__icons {
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .material__icons {
+    gap: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__icons {
+    gap: calc(30px + 0 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__icons {
+    gap: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__icons {
+    gap: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .material__icons-item {
+    width: 17.7083333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  .material__icons-item {
+    width: calc(150px + 105 * (100vw - 768px) / (1440 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .material__icons-item {
+    width: calc(150px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 320px) {
+  .material__icons-item {
+    width: 150px;
+  }
+}
+.material__icons-item img {
+  width: 100%;
+}
 
+@media (max-width: 1279px) {
+  .material__content {
+    grid-template-columns: repeat(2, 48%);
+    grid-template-rows: repeat(2, max-content);
+  }
+  .material__item {
+    flex-direction: column !important;
+  }
+  .material__img {
+    justify-content: start;
+  }
+}
+@media (max-width: 767px) {
+  .material__icons {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, max-content);
+  }
+  .material__icons-item {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .material__content {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(4, max-content);
+  }
+  .material__text {
+    height: auto;
+  }
+  .material__icons {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(4, max-content);
+  }
+}
 @font-face {
   font-family: "R4";
   src: url("../public/fonts/Roboto-Regular.eot") format("embedded-opentype"), url("../public/fonts/Roboto-Regular.woff2") format("woff2"), url("../public/fonts/Roboto-Regular.woff") format("woff"), url("../public/fonts/Roboto-Regular.ttf") format("truetype");
