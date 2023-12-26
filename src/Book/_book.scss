@@ -1,0 +1,114 @@
+.book {
+    &__main {
+        @include adap(padding-top, 114, 60, 60);
+        @include adap(padding-left, 165, 40, 15);
+        @include adap(padding-right, 165, 40, 15);
+        @include adap(padding-bottom, 114, 60, 60);
+        position: relative;
+        overflow: hidden;
+    }
+    &__title {
+        @include adap(margin-bottom, 8, 20);
+        @include adap(font-size, 40, 30, 24);
+        color: #666666;
+    }
+    &__text {
+        @include adap(margin-bottom, 30);
+        @include adap(width, 350);
+        @include adap(font-size, 18, 17, 16);
+        line-height: 170%;
+    }
+    &__button {
+        @include adap(height, 70, 70, 50);
+        @include adap(width, 255, 255, 144);
+        @include adap(font-size, 20, 20, 18);
+        border: 1px solid #7875FE;
+        background-color: initial;
+        color: #7875FE;
+        &:hover {
+            background: #7875FE;
+            color: #FFF;
+        }
+        &:focus {
+            background: #DAD9FB;
+            color: #7875FE;
+        }
+        &:active {
+            background: #4946B4;
+            color: #FFF;
+        }
+    }
+    &__img {
+        position: absolute;
+        @include adap(top, 90, 60);
+        @include adap(right, 165, -80, 15);
+        @include adap(width, 730, 449);
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__line {
+        @include adap(padding-left, 165, 40, 15);
+        @include adap(padding-right, 165, 40, 15);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adap(height, 80);
+        background: #4C5866;
+    }
+    &__name {
+        img {
+            @include adap(height, 22);
+            @include adap(width, 140);
+        }
+    }
+    &__messages {
+        display: flex;
+        @include adap(gap, 30);
+    }
+    &__mes-item {
+        @include adap(height, 24);
+        @include adap(width, 24);
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .book {
+        &__img {
+            margin: 0 auto;
+            width: 100%;
+            position: static;
+        }
+        &__text {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .book {
+        &__line {
+            flex-direction: column;
+            height: auto;
+        }
+        &__name {
+            @include adap(padding-top, 20);
+            @include adap(padding-bottom, 20);
+            width: 100%;
+            border-bottom: 1px solid #dddddd21;
+            display: flex;
+            justify-content: center;
+        }
+        &__messages {
+            @include adap(padding-top, 20);
+            @include adap(padding-bottom, 20);
+        }
+    }
+}

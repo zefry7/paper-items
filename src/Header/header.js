@@ -1,6 +1,4 @@
 import logo from "./img/logo.svg"
-import search from "./img/search.svg"
-import log from "./img/log-in.svg"
 import { useState } from "react";
 
 function Header() {
@@ -14,7 +12,9 @@ function Header() {
         <header class="header">
             <div class="header__top-block">
                 <div class="header__logo">
-                    <img src={logo} alt="Логотип" />
+                    <a href="">
+                        <img src={logo} alt="Логотип" />
+                    </a>
                 </div>
                 {wi >= 1024 &&
                     <nav class="header__links">
@@ -26,11 +26,8 @@ function Header() {
                 }
                 {wi >= 576 &&
                     <div class="header__icons">
-                        <div class="header__search">
-                            <img src={search} alt="Кнопка поиска" />
-                        </div>
+                        <div class="header__search"></div>
                         <div class="header__log-in">
-                            <img src={log} alt="Кнопка входа в личный кабинет" />
                         </div>
                     </div>
                 }
@@ -55,10 +52,8 @@ function Header() {
                             </div>
                             <div class="header__icons">
                                 <div class="header__search">
-                                    <img src={search} alt="Кнопка поиска" />
                                 </div>
                                 <div class="header__log-in">
-                                    <img src={log} alt="Кнопка входа в личный кабинет" />
                                 </div>
                             </div>
                         </>

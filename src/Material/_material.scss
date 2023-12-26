@@ -10,11 +10,9 @@
         grid-template-rows: repeat(1, max-content);
         @include adap(gap, 30);
     }
-    &__item {
 
-    }
     &__img {
-        margin-bottom: 20px;
+        @include adap(margin-bottom, 20);
         display: flex;
         justify-content: center;
         overflow: hidden;
@@ -31,12 +29,12 @@
         width: 100%;
     }
     &__name {
-        margin-bottom: 8px;
+        @include adap(margin-bottom, 8);
         @include adap(font-size, 30, 30, 24);
         color: #666666;
     }
     &__type {
-        margin-bottom: 8px;
+        @include adap(margin-bottom, 8);
         @include adap(font-size, 14);
         color: #B5B5BD;
     }
@@ -48,16 +46,35 @@
     &__more {
         margin-top: auto;
         @include adap(font-size, 20);
+        width: max-content;
         color: #7875FE;
         display: flex;
         align-items: center;
-        gap: 5px;
+        @include adap(gap, 5);
+        cursor: pointer;
         &::after {
             content: "";
             display: inline-block;
-            height: 20px;
-            width: 20px;
+            @include adap(height, 20);
+            @include adap(width, 20);
             background: url(../public/img/Material/arrow.svg) center/ 100% no-repeat;
+        }
+        &:focus {
+            color: #7875FE;
+            background-color: #DAD9FB;
+        }
+        &:hover {
+            color: #4946B4;
+            &::after {
+                background: url(../public/img/Material/arrow-h-act.svg) center/ 100% no-repeat;
+            }
+        }
+        &:active {
+            color: #4946B4;
+            background-color: initial;
+            &::after {
+                background: url(../public/img/Material/arrow-h-act.svg) center/ 100% no-repeat;
+            }
         }
     }
     &__icons {
@@ -74,6 +91,12 @@
     }
     &__icons-item {
         @include adap(width, 255, 150);
+        transition: all 0.1s linear;
+        cursor: pointer;
+        &:hover {
+           transform: scale(0.9); 
+           transition: all 0.1s linear;
+        }
         img {
             width: 100%;
         }

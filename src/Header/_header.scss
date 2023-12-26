@@ -47,15 +47,27 @@
         @include adap(gap, 30);
     }
     &__search {
-        img {
-            @include adap(height, 24);
-            @include adap(width, 24);
+        @include adap(height, 24);
+        @include adap(width, 24);
+        background: url("../public/img/Header/search.svg") center/ 100% no-repeat;
+        cursor: pointer;
+        &:hover {
+            background: url("../public/img/Header/search-hover.svg") center/ 100% no-repeat; 
+        }
+        &:active {
+            background: url("../public/img/Header/search-active.svg") center/ 100% no-repeat; 
         }
     }
     &__log-in {
-        img {
-            @include adap(height, 24);
-            @include adap(width, 24);
+        @include adap(height, 24);
+        @include adap(width, 24);
+        background: url("../public/img/Header/log-in.svg") center/ 100% no-repeat;
+        cursor: pointer;
+        &:hover {
+            background: url("../public/img/Header/log-in-hover.svg") center/ 100% no-repeat; 
+        }
+        &:active {
+            background: url("../public/img/Header/log-in-active.svg") center/ 100% no-repeat; 
         }
     }
     &__burger {
