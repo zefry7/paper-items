@@ -21,9 +21,11 @@
         @include adap(height, 70, 70, 50);
         @include adap(width, 255, 255, 144);
         @include adap(font-size, 20, 20, 18);
-        border: 1px solid #7875FE;
+        border: solid #7875FE;
+        @include adap(border-width, 1);
         background-color: initial;
         color: #7875FE;
+        transition: all 0.2s linear;
         &:hover {
             background: #7875FE;
             color: #FFF;

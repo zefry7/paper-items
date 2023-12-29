@@ -2,7 +2,7 @@
     &__top-block {
         @include adap(padding-left, 165, 40, 15);
         @include adap(padding-right, 165, 40, 15);
-        @include adap(height, 80, 40, 40);
+        @include adap(height, 80, 44, 44);
         display: flex;
         align-items: center;
         border-bottom: 1px solid #DDD;
@@ -10,11 +10,13 @@
     &__bottom-block {
         @include adap(padding-left, 165, 40, 15);
         @include adap(padding-right, 165, 40, 15);
-        height: 60px;
+        position: relative;
+        @include adap(height, 60);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #DDD;
+        border-bottom: solid #DDD;
+        @include adap( border-bottom-width, 1);
     }
     &__logo {
         margin-right: auto;
@@ -29,6 +31,8 @@
         @include adap(gap, 60, 40, 0);
         &-item {
             @include adap(font-size, 20);
+            transition: all 0.1s linear;
+            cursor: pointer;
             &:focus {
                 color: #4C5866;
                 background-color: #DAD9FB;
@@ -44,12 +48,13 @@
     }
     &__icons {
         display: flex;
-        @include adap(gap, 30);
+        align-items: center;
     }
     &__search {
         @include adap(height, 24);
         @include adap(width, 24);
         background: url("../public/img/Header/search.svg") center/ 100% no-repeat;
+        transition: all 0.1s linear;
         cursor: pointer;
         &:hover {
             background: url("../public/img/Header/search-hover.svg") center/ 100% no-repeat; 
@@ -58,10 +63,52 @@
             background: url("../public/img/Header/search-active.svg") center/ 100% no-repeat; 
         }
     }
+    &__search-line {
+        @include adap(margin-left, 10);
+        @include adap( padding-bottom, 3);
+        @include adap(height, 24);
+        animation: line 0.2s linear;
+        animation-fill-mode: forwards;
+        position: relative;
+        border-bottom: 1px solid #D1D1E5;
+        @include adap(font-size, 20);
+        color: #4C5866;
+        &::placeholder {
+            color: #D1D1E5;
+        }
+    }
+    &__search-close {
+        @include adap(height, 24);
+        @include adap(width, 16);
+        background: url("../public/img/Header/close.svg") center/ 100% no-repeat; 
+        border-bottom: solid #D1D1E5;
+        @include adap( border-bottom-width, 1);
+        cursor: pointer;
+        &:hover {
+            transition: all 0.1s linear;
+            background: url("../public/img/Header/close-hover.svg") center/ 100% no-repeat; 
+        }
+
+        &:active {
+            transition: all 0.1s linear;
+            background: url("../public/img/Header/close-active.svg") center/ 100% no-repeat;   
+        }
+    }
+    @keyframes line {
+        0% {
+            width: 0;
+        }
+        100% {
+            @include adap(min-width, 160);
+            width: 50vw;
+        }
+    }
     &__log-in {
         @include adap(height, 24);
         @include adap(width, 24);
+        @include adap(margin-left, 30, 15);
         background: url("../public/img/Header/log-in.svg") center/ 100% no-repeat;
+        transition: all 0.1s linear;
         cursor: pointer;
         &:hover {
             background: url("../public/img/Header/log-in-hover.svg") center/ 100% no-repeat; 
@@ -70,19 +117,82 @@
             background: url("../public/img/Header/log-in-active.svg") center/ 100% no-repeat; 
         }
     }
-    &__burger {
-        height: 20px;
-        width: 24px;
-    }
     &__burger-button {
+        position: relative;
+        z-index: 3;
+        @include adap(height, 20);
+        @include adap(width, 24);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
         span {
-            height: 2px;
+            transition: all 0.1s linear;
+            @include adap(border-radius, 5);
+            @include adap(height, 2);
             width: 100%;
             background-color: #4C5866;
+        }
+    }
+    &__burger-button_active {
+        @include adap(height, 24);
+        position: relative;
+        span:first-child {
+            transition: all 0.1s linear;
+            position: absolute;
+            top: 50%;
+            transform: rotateZ(45deg) translateY(-50%);
+        }
+
+        & span:nth-child(2) {
+            position: absolute;
+            top: 50%;
+            width: 0;
+            transform: translateY(-50%);
+        }
+
+        span:last-child {
+            transition: all 0.1s linear;
+            position: absolute;
+            top: 50%;
+            transform: rotateZ(-45deg) translateY(-50%);
+        }
+    }
+    &__burger-content {
+        @include adap(margin-left, 165, -40, -15);
+        @include adap(padding-left, 165, 40, 15);
+        @include adap(padding-top, 70);
+        @include adap(padding-bottom, 50);
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        @include adap(gap, 50);
+        z-index: 2;
+        width: 100%; 
+        overflow-y: auto;
+        height: calc(100vh - 44px);
+        background: #EBEBEB;
+    }
+    &__arrow-up {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 5;
+        @include adap(right, 55, 10, 10);
+        @include adap(bottom, 100, 100, 140);
+        @include adap(height, 45);
+        @include adap(width, 45);
+        border-radius: 50%;
+        border: solid #C4C4C4;
+        @include adap(border-width, 1);
+        background-color: #EBEBEB;
+        cursor: pointer;
+        img {
+            max-width: 100%;
+            width: 70%;
+            height: auto;
+            transform: rotateZ(-90deg);
         }
     }
 }

@@ -50,7 +50,7 @@ function Material() {
                             <h5 class="material__name">{value.name}</h5>
                             <p class="material__type">{value.count}</p>
                             <p class="material__description">{value.desc}</p>
-                            <a href="" class="material__more">Подробнее</a>
+                            <p class="material__more">Подробнее</p>
                         </div>
                     </div>
                 ))}

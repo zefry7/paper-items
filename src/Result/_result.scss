@@ -15,7 +15,8 @@
         display: flex;
         align-items: center;
         @include adap(gap, 30, 0, 30);
-        border-top: 1px solid #C0C0C0;
+        border-top: solid #C0C0C0;
+        @include adap(border-top-width, 1);
         &-img {
             img {
                 @include adap(width, 160, 150, 130);
